@@ -1,5 +1,5 @@
 {% set name = "deeptime" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3114f1ef926fa1be8abb693c220d91cf2d9ee9e11caa96a467082b0945c720cb
+  sha256: eb02b5da7962187dcac5759900636cb0bbfe45944bcd531692fb8d622bdefee5
 
 build:
   number: 0
@@ -35,6 +35,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy
     - scikit-learn
+    - threadpoolctl
     - intel-openmp  # [osx]
 
 test:
