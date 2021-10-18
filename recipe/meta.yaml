@@ -36,7 +36,6 @@ requirements:
     - scipy
     - scikit-learn
     - threadpoolctl
-    - intel-openmp  # [osx]
 
 test:
   imports:
