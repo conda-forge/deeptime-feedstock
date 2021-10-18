@@ -27,7 +27,6 @@ requirements:
     - scipy
     - pybind11
     - pybind11-abi
-    - intel-openmp  # [osx]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
