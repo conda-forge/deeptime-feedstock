@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: eb02b5da7962187dcac5759900636cb0bbfe45944bcd531692fb8d622bdefee5
+  sha256: c19b89a2b5ebbea8c58f6a500ce97ebed4775b16ae80af5e2a8d5dec80e6d501
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36]
 
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - scipy
     - pybind11
-    - intel-openmp  # [osx]
+    - pybind11-abi
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
@@ -36,7 +36,6 @@ requirements:
     - scipy
     - scikit-learn
     - threadpoolctl
-    - intel-openmp  # [osx]
 
 test:
   imports:
