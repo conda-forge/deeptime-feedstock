@@ -1,5 +1,5 @@
 {% set name = "deeptime" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f43f6e24c25300641180f17a7d65aac01a29e360a09f4d6dfa22116201562c56
+  sha256: 6f575acd612eeb2883e36ed73bebbde72fc9033bf81d89cd02b3b6ffd9c7e853
 
 build:
   number: 0
@@ -26,7 +26,6 @@ requirements:
     - numpy
     - scipy
     - pybind11
-    - pybind11-abi
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
@@ -51,7 +50,7 @@ about:
   description: |
     Deeptime is a Python library for analysis for time series data. 
     In particular, methods for dimensionality reduction, clustering, 
-    and Markov model estimation are implemented. It is available for Python 3.6+.
+    and Markov model estimation are implemented.
   doc_url: https://deeptime-ml.github.io/
   dev_url: https://github.com/deeptime-ml/deeptime
 
