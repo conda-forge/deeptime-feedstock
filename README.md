@@ -15,7 +15,7 @@ Documentation: https://deeptime-ml.github.io/
 
 Deeptime is a Python library for analysis for time series data.
 In particular, methods for dimensionality reduction, clustering,
-and Markov model estimation are implemented. It is available for Python 3.6+.
+and Markov model estimation are implemented.
 
 
 Current build status
