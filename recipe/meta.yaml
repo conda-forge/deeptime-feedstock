@@ -25,6 +25,7 @@ requirements:
     - pip
     - numpy
     - scipy
+    - toml
     - pybind11
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
