@@ -1,5 +1,5 @@
 {% set name = "deeptime" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e867d0a1e2a909b0e76a03f147e2fd7a0d22c787f63330349f140091d0c529a7
+  sha256: 863cc6da1a47578952b244994ce56984b4e01183972b513a6e9067cd0a9d07e6
 
 build:
   number: 0
@@ -27,6 +27,9 @@ requirements:
     - scipy
     - toml
     - pybind11
+    - ninja
+    - cmake >=3.18
+    - scikit-build
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
@@ -60,3 +63,4 @@ extra:
     - clonker
     - marscher
     - MaaikeG
+    - thempel
