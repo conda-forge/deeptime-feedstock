@@ -1,5 +1,5 @@
 {% set name = "deeptime" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 863cc6da1a47578952b244994ce56984b4e01183972b513a6e9067cd0a9d07e6
+  sha256: ad4f9f8bccb60104080475a371326b5af5db19d0a727c3c163eb72fe13e7a199
 
 build:
   number: 0
