@@ -18,6 +18,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - versioneer ==0.28
+    - cython
+    - scipy
 
   host:
     - python
@@ -30,6 +33,7 @@ requirements:
     - ninja
     - cmake >=3.18
     - scikit-build
+    - versioneeer ==0.28
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
