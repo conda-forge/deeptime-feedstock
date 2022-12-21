@@ -28,7 +28,7 @@ requirements:
     - pip
     - numpy
     - scipy
-    - toml
+    - tomli  # [py<311]
     - pybind11
     - ninja
     - cmake >=3.18
