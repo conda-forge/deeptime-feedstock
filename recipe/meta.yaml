@@ -7,11 +7,8 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 58de640feb104ac7472f941b227bb9ff34d7703594f510543f8baf4f4f56e2f8
-
-build:
   number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  sha256: 58de640feb104ac7472f941b227bb9ff34d7703594f510543f8baf4f4f56e2f8 
   skip: true  # [py<36]
 
 requirements:
