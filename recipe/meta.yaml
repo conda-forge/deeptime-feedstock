@@ -1,5 +1,5 @@
 {% set name = "deeptime" %}
-{% set version = "0.4.5" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,39 +7,31 @@ package:
 
 source:
   url: https://github.com/{{ name }}-ml/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 58de640feb104ac7472f941b227bb9ff34d7703594f510543f8baf4f4f56e2f8 
+  sha256: 9ec37d0a43024ccc4bf474ea22034a21f14451a0a143e7405ba7d0acc0aa5b23
+
 build:
-  number: 2
-  skip: true  # [py<36]
+  number: 0
+  skip: true  # [py<310]
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - pybind11 >=3.1.0                       # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake >=3.18
-    - make  # [not win]
-    - versioneer ==0.28
-    - cython
-    - scipy
+    - ninja
 
   host:
     - python
-    - cython
     - pip
+    - scikit-build-core >=0.10
+    - setuptools-scm >=8
     - numpy
-    - scipy
-    - tomli  # [py<311]
-    - pybind11
-    - ninja
-    - cmake >=3.18
-    - scikit-build
-    - versioneer ==0.28
+    - pybind11 >=3.1.0
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 
@@ -52,6 +44,10 @@ requirements:
 test:
   imports:
     - deeptime
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/deeptime-ml/deeptime
